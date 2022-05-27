@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300;400;600&display=swap');
+
+
+body{
+    margin: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#nav-container{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #fff;
+}
+nav{
+    /*border:1px solid black;*/
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+a{
+    text-decoration: none;
+    margin-right: 10px;
+    color: black;
+}
+sub{
+    font-size: 30px;
+    color: teal;
+    font-family: 'Dancing Script', cursive;
+}
+
+.recipe_of_day{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    color: teal;
+    padding: 20px;
+    font-size: 48px;
+    font-weight: 600;
+}
+#input_search{
+    position: relative;
+    padding: 8px 50px 8px 10px;
+    border: 1px solid #eee;
+    border-top-left-radius:20px;
+    border-bottom-left-radius:20px;
+}
+#input_search + button{
+    padding: 8px 20px ;
+    margin-left: -4px;
+    border: 1px solid #eee;
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
+}
+#search_result{
+    border: 1px solid #eee;
+    width: 280px;
+    height: 250px;
+    overflow:auto;
+    position: absolute;
+    z-index: 99;
+    padding: 5px;
+    display: none;
+    background: #fff;
+
+}
+
+
+#search_result > div{
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    gap: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#search_result img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+}
+#show_result{
+    width: 80%;
+    margin: auto;
+    margin-top: 2%;
+}
+#show_result > div > div:first-child{
+    display: flex;
+    gap:20px;
+    align-items: center;
+    line-height:45px;
+    padding-bottom: 20px;
+    width: 70%;
+    margin: auto;
+}
+
+.recipe_Details{
+    display: flex;
+     gap:30px;
+    width:70%;
+    height: 300px;
+    overflow: hidden;
+    margin: auto;
+    justify-content: center;
+    padding: 10px;
+    line-height:30px;
+    text-overflow: ellipsis;
+
+}
+
+.show.recipe_Details{
+    height: auto;
+}
+.recipe_Details h2{
+    border-bottom: 1px solid #eee;
+     padding: 10px 5px;
+     margin-bottom: 10px;
+}
+
+
+.ingredients table , tr , td{
+    white-space: nowrap;
+    padding: 5px 8px;
+}
+
+#show_result img{
+    height:250px;
+    object-fit: contain;
+    align-self: center;
+    padding: 10px;
+    border-radius:50px;
+
+}
+
+
+#show_result a{
+    background: black;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+#show_result h1{
+    font-size: 48px;
+
+}
+
+.tags span{
+    display: block;
+    margin-right: 10px;
+    background: teal;
+    color: #fff;
+    padding: 3px 6px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    line-height: 15px;
+}
+#show_result .tags:before{
+    content: "Tags";
+    margin-right: 10px;
+
+}
+
+.recipe_Details + div{
+    display:flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0px;
+    
+}
+.recipe_Details + div button{
+    background: #fff;
+    border: none;
+    font-size: 20px;
+    cursor:pointer;
+}
+.recipe_Details + div p{
+    border-top: 1px dashed #ccc;
+    align-self: center;
+    width:30%;
+}
+
+
+
+#foods{
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    justify-content: center;
+    grid-gap: 20px;
+    padding: 10px 20px;
+}
+#foods > div{
+    margin-bottom: 25px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding:20px;
+    border-radius: 5px;
+}
+#foods > div > div{
+    width: 100%;
+    margin-bottom: 5px;
+
+}
+#foods > div  p{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+
+}
+#foods > div  a{
+    display: inline-block;
+    text-align: center;
+    background: red;
+    margin-top: 8px;
+    border-radius: 8px;
+    color: #fff;
+    padding:8px 10px;
+}
+
+#foods img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
